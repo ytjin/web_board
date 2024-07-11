@@ -1,0 +1,38 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="m-4">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'topics-by-board' board.pk %}">{{ board.name }}</a></li>
+            <li class="breadcrumb-item">Topic</li>
+            <li class="breadcrumb-item">Post</li>
+        </ol>
+    </nav>
+</div>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Board</th>
+        <th>Posts</th>
+        <th>Topics</th>
+        <th>Last Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for board in boards %}
+        <tr>
+          <td>
+            {{ board.name }}
+            <small class="text-muted d-block">{{ board.description }}</small>
+          </td>
+          <td class="align-middle">0</td>
+          <td class="align-middle">0</td>
+          <td></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

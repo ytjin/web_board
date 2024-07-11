@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Board: {{ board.name }} </h1>
+
+<h3>New topic</h3>
+    
+
+{% if topic_list %}
+ 
+<ul>
+
+  {% for topic in topic_list %}
+
+  <li>
+    <a href="{{ topic.get_absolute_url }}">{{ topic.subject }}</a> ({{topic.last_updated}})
+  </li>
+  {% endfor %}

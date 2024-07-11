@@ -1,3 +1,14 @@
+# Except the diyblog and blog directories within env
+ !/env/web_board/
+ !/env/board/
+
+# Ignore all files in the virtual environment
+#/env/*
+/env/Lib/
+/env/Scripts/
+/env/include/
+/env/pyvenv.cfg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -124,9 +135,9 @@ celerybeat.pid
 # Environments
 .env
 .venv
-env/
-venv/
-ENV/
+#env/
+#venv/
+#ENV/
 env.bak/
 venv.bak/
 
