@@ -1,4 +1,5 @@
 # Except the diyblog and blog directories within env
+#/env/
  !/env/web_board/
  !/env/board/
 
